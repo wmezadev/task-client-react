@@ -4,7 +4,7 @@ import TopBar from '../layout/TopBar';
 import TaskForm from '../tasks/TaskForm';
 import TaskList from '../tasks/TaskList';
 
-const Project = () => {
+const ProjectsPage = () => {
     return ( 
         <div className="container-app">
             <Sidebar/>
@@ -21,4 +21,4 @@ const Project = () => {
     );
 }
  
-export default Project;
+export default ProjectsPage;
