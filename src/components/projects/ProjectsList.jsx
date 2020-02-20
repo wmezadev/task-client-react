@@ -1,7 +1,7 @@
 import React from 'react';
 import Project from './Project';
 
-const ListProjects = () => {
+const ProjectList = () => {
     const projects = [
         { name: "E-commerce"},
         { name: "Intranet"},
@@ -19,4 +19,4 @@ const ListProjects = () => {
     );
 }
  
-export default ListProjects;
+export default ProjectList;
