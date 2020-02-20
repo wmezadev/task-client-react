@@ -71,7 +71,7 @@ a {
 .btn-primary:hover {
   background: var(--gris3);
 }
-.btn-secundary {
+.btn-secondary {
   background-color: var(--gris1);
 }
 .btn-block {
@@ -226,10 +226,10 @@ aside  {
   margin: 0;
 }
 
-.state {
+.status {
   margin-right: 1rem;
 }
-.state button, 
+.status button, 
 .message {
   font-weight: 900;
   font-family: var(--textFont);
