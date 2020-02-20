@@ -24,6 +24,10 @@ const TaskList = () => {
                     ))
                 }
             </ul>
+            <button
+                type="button"
+                className="btn btn-secondary">
+            Delete project &times;</button>
         </Fragment>
     );
 }
