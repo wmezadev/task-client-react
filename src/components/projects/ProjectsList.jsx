@@ -9,7 +9,7 @@ const ProjectList = () => {
     
     useEffect(() => {
         getProjects();
-    }, []);
+    });
 
     // Check if projects has items
     if(projects.length === 0) return null;
