@@ -12,7 +12,7 @@ const ProjectList = () => {
     }, []);
 
     // Check if projects has items
-    if(projects.length === 0) return null;
+    if(projects.length === 0) return <p>No projects</p>;
     
     return ( 
         <ul className="project-list">
