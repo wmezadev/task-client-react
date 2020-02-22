@@ -1,3 +1,4 @@
 export const PROJECT_FORM = 'PROJECT_FORM';
 export const GET_PROJECTS = 'GET_PROJECTS';
 export const ADD_PROJECTS = 'ADD_PROJECTS';
+export const VALIDATE_FORM = 'VALIDATE_FORM';

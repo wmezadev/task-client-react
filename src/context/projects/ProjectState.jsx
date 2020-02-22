@@ -5,7 +5,8 @@ import uuid from 'uuid';
 import { 
     PROJECT_FORM,
     GET_PROJECTS,
-    ADD_PROJECTS
+    ADD_PROJECTS,
+    VALIDATE_FORM
 } from '../../types'; 
 
 const ProjectState = props => {
@@ -20,7 +21,8 @@ const ProjectState = props => {
 
     const initialState = {
         projects: [],
-        form: false
+        form: false,
+        formError: false
     }
 
     // dispatch execs actions
@@ -38,7 +40,7 @@ const ProjectState = props => {
         dispatch({
             type: GET_PROJECTS,
             payload: projects
-        })
+        });
     }
 
     // add new project
@@ -49,7 +51,14 @@ const ProjectState = props => {
         dispatch({
             type: ADD_PROJECTS,
             payload: project
-        })
+        });
+    }
+
+    // Show error based on Form
+    const showError = () => {
+        dispatch({
+            type: VALIDATE_FORM
+        });
     }
 
     return (
@@ -57,9 +66,11 @@ const ProjectState = props => {
             value={{
                 projects: state.projects,
                 form: state.form,
+                formError: state.formError,
                 toggleForm,
                 getProjects,
-                addProject
+                addProject,
+                showError
             }}
         >
             {props.children}

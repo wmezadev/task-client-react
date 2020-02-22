@@ -4,7 +4,7 @@ import ProjectContext from '../../context/projects/ProjectContext';
 const NewProject = () => {
     // Get state from the form
     const projectContext = useContext(ProjectContext);
-    const { form, toggleForm, addProject } = projectContext;
+    const { form, formError, toggleForm, addProject, showError } = projectContext;
 
     // Project local state
     const [project, setProject] = useState({
@@ -25,6 +25,7 @@ const NewProject = () => {
 
         // validate
         if(name === '') {
+            showError();
             return;
         }
         // add to state
@@ -65,6 +66,7 @@ const NewProject = () => {
                 ) :
                     null
             }    
+            { formError ? <p className="error message">Name is required</p> : null}
         </Fragment>
     );
 }
