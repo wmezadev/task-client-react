@@ -4,7 +4,7 @@ import ProjectContext from '../../context/projects/ProjectContext';
 const NewProject = () => {
     // Get state from the form
     const projectContext = useContext(ProjectContext);
-    const { form, toggleForm } = projectContext;
+    const { form, toggleForm, addProject } = projectContext;
 
     // Project local state
     const [project, setProject] = useState({
@@ -24,8 +24,13 @@ const NewProject = () => {
         e.preventDefault();
 
         // validate
+        if(name === '') {
+            return;
+        }
         // add to state
+        addProject(project);
         // reset form
+        setProject({ name: '' });
     }
 
     return ( 
@@ -51,8 +56,9 @@ const NewProject = () => {
                             onChange={onChangeProject}
                         />
                         <button
-                            type="button"
-                            className="btn btn-block btn-primary">
+                            type="submit"
+                            className="btn btn-block btn-primary"
+                            >
                         Add project
                         </button>
                     </form>

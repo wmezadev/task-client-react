@@ -9,6 +9,7 @@ const TaskForm = () => {
                         type="text"
                         className="input-text"
                         placeholder="Task name..."
+                        autoComplete="off"
                         name="name"
                     />
                 </div>
